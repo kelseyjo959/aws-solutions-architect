@@ -15,7 +15,7 @@
 * **files can range from 0 Bytes to 5 TB**
 * **unlimited storage**
 * **files stored in Buckets (think of a folder)**
-* **S3 s a universal name space, names must be unique globally**
+* **S3 s a universal name space**, names must be unique globally
   * Must be unique because a **unique** web address will be created
     * **HTTPS** link will consist of the aws region as well as the bucket name
 * For file uploading, a **HTTP 200 code** will be received if upload successful
@@ -28,7 +28,7 @@
 * **versoining**
 * **encryption**
 * **multi factor authentication for DELETE**
-* **secure data with access control lists and bucket policies**
+* **secure data and control access with access control lists and bucket policies**
 
 ## Key Fundamentals of S3
 
@@ -51,4 +51,49 @@
 * 99.99% availability
 * 99.999999999% durability of information (remember 11 9's)
 
-> **Up Next**: [S3 Bucket Notes](./notes.md)
+> **Additional Notes on S3 Tiers**: [S3 Bucket Notes on Tiers and Billing](./tiers.md)
+
+## Security and Encryption Basics
+
+* newly created buckets are **private** by default
+* buckets can be configured to create access logs that can then be sent to another bucket for log storage, or another bucket account
+* **Access Control List**
+* **Bucket Policies**
+
+> **Security and Encryption Notes**: [Encryption Notes](./security-encryption.md)
+
+## Version Control
+
+* stores all versions of an object
+  * this includes all writes and deletes
+* great backup tool
+* once versioning is enabled, it **cannot be disabled**
+  * versioning can be suspended
+* integrates with **Lifecycle Rules**
+* Versioning's **MFA Delete** capability can add additional layer of security
+* To un-do a object deletion, delete the 'delete marker' version
+  * this will restore the object from the latest version before the delete marker
+
+## Lifecycle Management and Glacier
+
+* create lifecycle rules to manage objects
+  * **use rules to automate transitions to tiered storage**
+  * use rules to **expire** objects
+  * can be used in conjunction with versioning
+  * **apply rules to current or past versions**
+  * transitions usually counted in days
+  * configure expiration rules for permanent deletion
+  * expiration rules for incomplete multi-part uploads
+
+## Cross Region Replication
+
+* **requires version control to be enabled on source and desintation**
+* replicate entire bucket or by specific tags for object(s)
+* chose buckets in same account or a different account
+  * can also create new bucket at time of rule creation
+* can change the storage tier at time of rule creation
+* create or chose IAM role while setting up rule
+* automatically gets same permissions as main bucket
+* **existing objects are not replicated automatically**
+  * **subsequent files will automatically replicated**
+* **deleting individual versions or delete markers will not be replicated**

@@ -97,3 +97,12 @@
 * **existing objects are not replicated automatically**
   * **subsequent files will automatically replicated**
 * **deleting individual versions or delete markers will not be replicated**
+
+## Transfer Acceleration
+
+* **uses the CloudFront Edge Network to accelerate uploads to S3**
+  * can use a distinct url to upload to edge location which will then upload to S3
+  * by uploading to Edge Network, the transfer can take place over **AWS backbone**
+  * AWs built their own tool to test this acceleration
+
+> *Next Up:* [**CloudFront**](./cloudfront.md)

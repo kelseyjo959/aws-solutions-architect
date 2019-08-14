@@ -105,4 +105,6 @@
   * by uploading to Edge Network, the transfer can take place over **AWS backbone**
   * AWs built their own tool to test this acceleration
 
-> *Next Up:* [**CloudFront**](./cloudfront.md)
+* *Next Up:* [More Info on: **CloudFront**](./cloudfront.md)
+
+* *Next Up:* [Info on: **Snowball**](./snowball.md)

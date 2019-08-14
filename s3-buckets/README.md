@@ -108,3 +108,5 @@
 * *Next Up:* [More Info on: **CloudFront**](./cloudfront.md)
 
 * *Next Up:* [Info on: **Snowball**](./snowball.md)
+
+* *Next Up:* [Info on: **Storage Gateways**](./storage-gateway.md)

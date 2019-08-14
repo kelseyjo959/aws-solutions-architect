@@ -10,30 +10,27 @@
 
 * 3 Types of Storage Gateways:
   * **File Gateway** (NFS & SMB)
-    * store files in S3
+    * store **flat files directly on S3**
     * NFS = Network File System mount point
     * metadata of object durably stores ownership, permissions, timestamps
     * once objects transferred to S3, all other S3 options become available (versioning, lifecycle, cross region, etc)
-  * **Volume Gateway** (iSCSI block protocol)
+  * **Volume Gateway** **(iSCSI block protocol)**
     * store hard disk drives or virtual disks in S3
     * data written to volumes can be asynchronously backed up as snapshots and stored as AWS EBS snapshots
       * EBS = Elastic Block Storage
     * snapshots are compressed to minimize storage size
       * Stored Volumes
-        * **stored volumes allow for on premise storage of entire data set with AWS snapshot back ups**
+        * **entire dataset is stored on-premise and is asynchronously backed up to S3**
         * 1GB - 16TB
       * Cached Volumes
-        * use AWS S3
-        * does not repicate entire data set
-        * **only stores the frequently accessed used data**
+        * **entire dataset stored on S3 and most frequently accessed data is cahced on-premise**
         * mimize on-premise hardware while still providing low-latency access
         * 1GB - 32TB
-  * **Tape Gateway** (VTL)
+  * **Virutal Tape Gateway** (VTL)
     * Virtual Tape Library
+    * virtual or physical appliances
     * Supported by NetBackup, Backup Exec, Veeamm, etc
     * replicates Virtual Tapes to S3
-
-  
 
   * File Gateway Diagram
   ![File Gateway](../images/file-gateway.png)

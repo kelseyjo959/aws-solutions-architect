@@ -1,5 +1,9 @@
 # S3 Bucket
 
+## READ THE AWS S3 BUCKET FAQs for Test Preparation
+
+* [FAQ](https://aws.amazon.com/s3/faqs/)
+
 ## Introduction
 
 * One of the oldest AWS Service offerings
@@ -11,15 +15,15 @@
 
 ## Features
 
-* **Object-based storage (think files, only)**
+* **Object-based** storage (think files, only)
 * **files can range from 0 Bytes to 5 TB**
 * **unlimited storage**
-* **files stored in Buckets (think of a folder)**
+* **files stored in Buckets** (think of a folder)
 * **S3 s a universal name space**, names must be unique globally
-  * Must be unique because a **unique** web address will be created
+  * Must be unique because a **unique web address** will be created
     * **HTTPS** link will consist of the aws region as well as the bucket name
 * For file uploading, a **HTTP 200 code** will be received if upload successful
-* **NOT** suitable for installing an operating system in a Bucket (use block based instead)
+* *NOT* suitable for installing an operating system in a Bucket (use block based instead)
 
 ### Key Features
 
@@ -33,8 +37,8 @@
 ## Key Fundamentals of S3
 
 * Objects are files
-* **Key** = name of the object
-* **Value** = sequence of bytes that makes up the data
+* **Key** : name of the object
+* **Value** : sequence of bytes that makes up the data
 * **Version ID** : allows for multiple versions of a file
 * **Metadata** : data about the object being stored
 * Subresources
@@ -43,7 +47,7 @@
 
 ## S3 Data Consistency Model
 
-* **read after write** consistency after PUTS of new objects - allows for immediate read of uploaded object
+* **read after write consistency** after PUTS of new objects - allows for immediate read of uploaded object
 * **eventual consistency for overwrite** PUTS and DELETES - small amount of time must pass to propagate the update or delete
 
 ## S3 Guarantees
@@ -51,16 +55,16 @@
 * 99.99% availability
 * 99.999999999% durability of information (remember 11 9's)
 
-> **Additional Notes on S3 Tiers**: [S3 Bucket Notes on Tiers and Billing](./tiers.md)
+* *Next Up:* [**S3 Tiers and Billing**](./tiers.md)
 
 ## Security and Encryption Basics
 
 * newly created buckets are **private** by default
-* buckets can be configured to create access logs that can then be sent to another bucket for log storage, or another bucket account
+* buckets can be configured to create *access logs* that can then be sent to another bucket for log storage, or another bucket account
 * **Access Control List**
 * **Bucket Policies**
 
-> **Security and Encryption Notes**: [Encryption Notes](./security-encryption.md)
+* *Next Up:* [**Security and Encryption**](./security-encryption.md)
 
 ## Version Control
 
@@ -88,6 +92,7 @@
 ## Cross Region Replication
 
 * **requires version control to be enabled on source and desintation**
+* **regions must be unique**
 * replicate entire bucket or by specific tags for object(s)
 * chose buckets in same account or a different account
   * can also create new bucket at time of rule creation
@@ -105,8 +110,8 @@
   * by uploading to Edge Network, the transfer can take place over **AWS backbone**
   * AWs built their own tool to test this acceleration
 
-* *Next Up:* [More Info on: **CloudFront**](./cloudfront.md)
+* *Next Up:* [**CloudFront**](./cloudfront.md)
 
-* *Next Up:* [Info on: **Snowball**](./snowball.md)
+* *Next Up:* [**Snowball**](./snowball.md)
 
-* *Next Up:* [Info on: **Storage Gateways**](./storage-gateway.md)
+* *Next Up:* [**Storage Gateways**](./storage-gateway.md)

@@ -20,7 +20,9 @@
 
 * **Users** - End users (such as people, or an application).
 * **Groups** - Collection of users. Users will also inherit permissions from group.
-* **Policies** - Are documents, in Javascript Standard Object Notation (JSON), that give the permissions for users, groups, and roles to interact with each other.
 * **Roles** - Assigned to AWS resources so that it may communicate with another feature provided by AWS. A good example is to allow a Lambda to write to an S3 bucket.
+* **Policies** - Are **JSON documents** that give the permissions for users, groups, and roles to interact with each other.
+
+* Policies applied to a Group with Users will cascade downwards
 
 > **Up Next**: [IAM Notes](./notes.md)

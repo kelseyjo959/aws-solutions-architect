@@ -2,11 +2,13 @@
 
 * IAM user sign-in link can be customized. This is a DNS change.  Publicly accessible URL
 
-* IAM does not reside within a single region, the users, groups, and role can be applied to all regions. Currently universal
+* IAM does not reside within a single region, the users, groups, and role can be applied to all regions. **Currently universal**
 * **Root Account** - is the account created when first setting up the AWS account and has complete administrator access.
+  * *set up MFA on root account*
+  * create and update password *rotation policies*
   * Always turn on multi-factor authentication (MFA) for the *root account* (always good practice for the other users on the AWS Account as well).
 * No new users have *any* permissions when created.
-  * Are assigned Access Key ID & Secret Access keys when first created. These cannot be used to access the console. AWS access via the APIs and Command Line instead.
+  * Are assigned **Access Key ID & Secret Access keys when first created**, which are *not the same as a password*. *Only viewed once* These cannot be used to access the console. AWS access via the APIs and Command Line instead.
     * Types of access for users;
         1. **Console Access** - Through AWS website via a username and password.
         2. **Programmatic Access** - Used for interacting with AWS through code typically via a programming or scripting language.

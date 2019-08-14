@@ -2,7 +2,7 @@
 
 ## Tiers
 
-* S3 Standard
+* *S3 Standard*
   * **99.99% availability**
   * **99.999999999% durability**
   * availability zones >= 3
@@ -12,7 +12,7 @@
   * first byte latency = milliseconds
     * redundant storage designed to sustain up to 2 concurrent facility losses
 
-* S3 IA (Infrequently Accessed)
+* *S3 IA* (Infrequently Accessed)
   * 99.9% availability
   * 99.999999999% durability
   * availability zones >= 3
@@ -20,11 +20,12 @@
   * minimum storage duration charge = 30 days
   * retrieval fee = per GB retrieved
   * first byte latency = milliseconds
+    * exact same features as Standard but accessing less frequently for a lower fee
     * data that will be accessed **less frequently**
     * **rapid access** still featured
     * lower fee than Standard but **retrieval fee** is charged
 
-* S3 One Zone - IA (old name = RRS)
+* *S3 One Zone-IA* (old name = RRS)
   * 99.5% availability
   * 99.999999999% durability
   * availability zones = 1
@@ -32,10 +33,11 @@
   * minimum storage duration charge = 30 days
   * retrieval fee = per GB retrieved
   * first byte latency = milliseconds
+    * **same as S3 IA but with support in only one Availability Zone**
     * lower-cost option for infrequently accessed data
     * **does not support multiple Availability Zone data resilience**
 
-* S3 Intelligent Tiering
+* *S3 Intelligent Tiering*
   * 99.9% availability
   * 99.999999999% durability
   * minimum capacity charge per object = null
@@ -48,7 +50,7 @@
     * no performance impact or operational overhead
     * uses **machine learning** to learn how often objects are used
 
-* S3 Glacier
+* *S3 Glacier*
   * 99.999999999% durability
   * availability zones >= 3
   * minimum capacity charge per object = 40KB
@@ -59,7 +61,7 @@
     * **retrieval times vary from minutes to hours**
     * reliably store any amount of data at competitive costs cheaper than on-premise solutions
 
-* S3 Glacier Deep Archive
+* *S3 Glacier Deep Archive*
   * 99.999999999% durability
   * availability zones >= 3
   * minimum capacity charge per object = 40KB
@@ -83,7 +85,3 @@
       * utilizes Amazon's Backbone Network
   * cross region replication
     * upon upload to one region, automatically replicated to another region
-
-## READ THE AWS S3 BUCKET FAQs for Test Preparation
-
-* [FAQ](https://aws.amazon.com/s3/faqs/)

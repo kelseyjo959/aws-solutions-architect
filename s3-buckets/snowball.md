@@ -1,7 +1,7 @@
 # Snowball
 
-* petabyte-scale data transport solution in disk format
-* uses secure appliance to transfer large amounts of **data into/out of AWS S3**
+* petabyte-scale data transport solution in **disk format**
+* uses secure appliance to **import or export data to AWS S3**
 * solves high data transfer issues:
   * high network costs
   * long transfer times

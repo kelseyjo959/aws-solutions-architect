@@ -2,7 +2,7 @@
 
 ## READ THE AWS S3 BUCKET FAQs for Test Preparation
 
-> [FAQ](https://aws.amazon.com/s3/faqs/)
+> [**FAQ**](https://aws.amazon.com/s3/faqs/)
 
 ## Introduction
 

@@ -25,4 +25,4 @@
 
 * Policies applied to a Group with Users will cascade downwards
 
-> **Up Next**: [IAM Notes](./notes.md)
+> *Up Next*: [**IAM Notes**](./notes.md)

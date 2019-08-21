@@ -61,8 +61,8 @@
 * **any number of EC2 instances for a Security Group**
 * **multiple Security Groups can be attached to an EC2 Instance**
 
-> *Next Up:* [EBS and Volumes](./ebs-and-volumes.md)
-> *Next Up:* [AMI Types](./ami-types.md)
+> *Next Up:* [**EBS and Volumes**](./ebs-and-volumes.md)
+> *Next Up:* [**AMI Types**](./ami-types.md)
 
 ## Encrypted Root Device Volumes & Snapshots
 
@@ -75,3 +75,5 @@
     * create copy of the Snapshot and select encryption type
     * create AMI from this copy
     * use AMI to launch new encrpyted Instance
+
+> *Next Up:* [**CLoud Watch**](./cloud-watch.md)

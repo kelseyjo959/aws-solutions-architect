@@ -44,3 +44,5 @@
   * root volume == operating system volume
 * **EBS root volumes of Default AMI's cannot be encrypted, must be done by 3rd party**
   * **additional volumes add on top of the root can be encrypted**
+
+> *Back to EC2 Notes:* [EC2 README](./README.md)

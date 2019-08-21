@@ -39,3 +39,5 @@
 * **Edge Locations are not just READ only, you can WRITE** to them too
 * **Objects can be invalidated which clears the cache of said object but at a cost**
   * this is called Invalidating The Cache
+
+> *Back to S3 Notes:* [S3 README](./README.md)

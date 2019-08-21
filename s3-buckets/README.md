@@ -2,7 +2,7 @@
 
 ## READ THE AWS S3 BUCKET FAQs for Test Preparation
 
-* [FAQ](https://aws.amazon.com/s3/faqs/)
+> [FAQ](https://aws.amazon.com/s3/faqs/)
 
 ## Introduction
 
@@ -55,7 +55,7 @@
 * 99.99% availability
 * 99.999999999% durability of information (remember 11 9's)
 
-* *Next Up:* [**S3 Tiers and Billing**](./tiers.md)
+> *Next Up:* [**S3 Tiers and Billing**](./tiers.md)
 
 ## Security and Encryption Basics
 
@@ -64,7 +64,7 @@
 * **Access Control List**
 * **Bucket Policies**
 
-* *Next Up:* [**Security and Encryption**](./security-encryption.md)
+> *Next Up:* [**Security and Encryption**](./security-encryption.md)
 
 ## Version Control
 
@@ -110,8 +110,6 @@
   * by uploading to Edge Network, the transfer can take place over **AWS backbone**
   * AWs built their own tool to test this acceleration
 
-* *Next Up:* [**CloudFront**](./cloudfront.md)
-
-* *Next Up:* [**Snowball**](./snowball.md)
-
-* *Next Up:* [**Storage Gateways**](./storage-gateway.md)
+> *Next Up:* [**CloudFront**](./cloudfront.md)
+> *Next Up:* [**Snowball**](./snowball.md)
+> *Next Up:* [**Storage Gateways**](./storage-gateway.md)

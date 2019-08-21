@@ -85,3 +85,5 @@
       * utilizes Amazon's Backbone Network
   * cross region replication
     * upon upload to one region, automatically replicated to another region
+
+> *Back to S3 Notes:* [S3 README](./README.md)

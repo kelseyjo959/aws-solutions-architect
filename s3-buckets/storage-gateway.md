@@ -40,3 +40,5 @@
   ![Cached Gateway](../images/cached-gateway.png)
   * Tape Gateway
   ![Tape Gateway](../images/tape-gateway.md)
+
+  > *Back to S3 Notes:* [S3 README](./README.md)

@@ -20,3 +20,5 @@
 * Ensure you customize smart policies applied to a rotation, types of characters and the length of passwords.
 
 * Billing Alarms can be set up within the CloudWatch Service. Setting up a billing alarm to send alerts to an email address to receive alert when particular threshold is met.
+
+> *Back to IAM Notes* [IAM README](./README.md)

@@ -41,4 +41,4 @@
   * No. of theoretical days of network utilization: 12
   * when to use Snowball = 60TB or more
 
-  [**Back to S3 README**](./README.md)
+  > *Back to S3 Notes:* [S3 README](./README.md)

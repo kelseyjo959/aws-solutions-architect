@@ -48,3 +48,50 @@
 ![EC2 Instance Types](../images/ec2-instance-types.png)
 * EC2 Mnemonic- Fight Dr Mcpxz in Australia
 ![EC2 Mnemonic](../images/ec2-instances-mnemonic.png)
+
+> *Next Up:* [**EC2 Lab Notes**](./ec2-lab-notes.md)
+
+## Security Groups Basics
+
+* **changes to Security Groups take effect immediately**
+* Security Groups are **stateful** - a change to an inbound rule effects the outbound
+* **cannot block a particular port or IP address within Security Groups**
+  * **inbound traffic is blocked by default**
+  * **all outbound traffic is allowed by default**
+* **any number of EC2 instances for a Security Group**
+* **multiple Security Groups can be attached to an EC2 Instance**
+
+## EBS
+
+* elastic block store or virtual hard disk
+* provides persistent block storage volumes for use with EC2
+* each EBS is automatically replicated within its Availability Zone for component failure protection
+* 5 Types
+  * **General Purpose SSD**
+    * balance price and performance
+    * for most work loads
+    * **API name = gp2**
+    * max IOPS.volume = 16,000
+  * **Provisioned IOPS SSD**
+    * highest performance
+    * for databases
+    * **API name = io1**
+    * max IOPS.volume = 64,000
+  * **Throughput Optimised Hard Disk Drive** - magnetic
+    * low cost HHD for frequently accessed, throughput intensive workloads
+    * for big data and data warehouses
+    * **API name = st1**
+    * max IOPS.volume = 500
+  * **Cold Hard Disk Drive** - magnetic
+    * lowest cost HHD for less frequently accessed
+    * for file servers
+    * **API name = sc1**
+    * max IOPS.volume = 250
+  * **EBS Magnetic**
+    * previous generation HHD
+    * for workloads that are accessed infreqently
+    * **API name = Standard**
+    * max IOPS.volume = 40-200
+
+  * Whichever Availability Zone your EC2 Instance is in, the Volume for will also be in that AZ
+

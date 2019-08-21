@@ -113,3 +113,19 @@
 > *Next Up:* [**CloudFront**](./cloudfront.md)
 > *Next Up:* [**Snowball**](./snowball.md)
 > *Next Up:* [**Storage Gateways**](./storage-gateway.md)
+
+## AWS Command Line
+
+* access CLI anywhere in the world
+* need to set up access in IAM
+* type `aws` + desired service + particular command
+  * `aws s3 ls` will list s3 buckets
+* if prompted to configure credentials
+  * `aws configure`
+  * paste in access key id
+  * paste in secret access key
+  * default region: `us-east-1`
+  * default output: carriage return
+* can be used to provision buckets, EC2 Instances, etc
+* `cd ~` has secret directory `.aws`
+  * has aws config and aws credentials

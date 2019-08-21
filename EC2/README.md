@@ -63,4 +63,15 @@
 
 > *Next Up:* [EBS and Volumes](./ebs-and-volumes.md)
 > *Next Up:* [AMI Types](./ami-types.md)
-> *Next Up:* [EBS and Encryption](./encryption.md)
+
+## Encrypted Root Device Volumes & Snapshots
+
+* Snapshots of encrypted Volumes are encrypted automatically
+* Volumes restored from encrypted Snapshots are encrypted automatically
+* only unencrypted Snapshots can be shared
+* Upon creation of EC2 Instance, the Root Volume can be encrypted
+  * If you need to encrypt it at a later date, this is the process:
+    * create snapshot of unencrypted root device volume
+    * create copy of the Snapshot and select encryption type
+    * create AMI from this copy
+    * use AMI to launch new encrpyted Instance

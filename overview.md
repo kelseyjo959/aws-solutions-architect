@@ -36,3 +36,7 @@ The overview below covers the need to know in the High Level Services section be
   * _**Storage**_ (S3 Buckets)
 
     > **Note**: Bold and italic list items from above are the main ones to study.
+
+## Created Acronyms
+
+* AZ = Availability Zone

@@ -61,37 +61,6 @@
 * **any number of EC2 instances for a Security Group**
 * **multiple Security Groups can be attached to an EC2 Instance**
 
-## EBS
-
-* elastic block store or virtual hard disk
-* provides persistent block storage volumes for use with EC2
-* each EBS is automatically replicated within its Availability Zone for component failure protection
-* 5 Types
-  * **General Purpose SSD**
-    * balance price and performance
-    * for most work loads
-    * **API name = gp2**
-    * max IOPS.volume = 16,000
-  * **Provisioned IOPS SSD**
-    * highest performance
-    * for databases
-    * **API name = io1**
-    * max IOPS.volume = 64,000
-  * **Throughput Optimised Hard Disk Drive** - magnetic
-    * low cost HHD for frequently accessed, throughput intensive workloads
-    * for big data and data warehouses
-    * **API name = st1**
-    * max IOPS.volume = 500
-  * **Cold Hard Disk Drive** - magnetic
-    * lowest cost HHD for less frequently accessed
-    * for file servers
-    * **API name = sc1**
-    * max IOPS.volume = 250
-  * **EBS Magnetic**
-    * previous generation HHD
-    * for workloads that are accessed infreqently
-    * **API name = Standard**
-    * max IOPS.volume = 40-200
-
-  * Whichever Availability Zone your EC2 Instance is in, the Volume for will also be in that AZ
-
+> *Next Up:* [EBS and Volumes](./ebs-and-volumes.md)
+> *Next Up:* [AMI Types](./ami-types.md)
+> *Next Up:* [EBS and Encryption](./encryption.md)

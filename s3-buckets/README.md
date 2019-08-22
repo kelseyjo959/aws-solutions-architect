@@ -129,3 +129,25 @@
 * can be used to provision buckets, EC2 Instances, etc
 * `cd ~` has secret directory `.aws`
   * has aws config and aws credentials
+  * this method creates security vulnerabilities
+
+## IAM Roles Concerning EC2
+
+* Under particular Instance Actions, Instance Settings will allow attachment of a Role
+* Roles are more secure than storing access key on individual EC2 Instances
+* Roles are easier to manage
+* Roles can be assigned after EC2 Instance creation via Console or CLI
+* Roles are universal - can be used in any region
+
+## Boot Strap Scripts (BASH)
+
+* way to automate AWS EC2 deployments
+* in creating a new Instance, in Advanced Details for Step 3
+  * add Bash script for when Instance first boots up
+  * `#!/bin/bash` at top of file
+
+## EC2 Instance Metadata
+
+* meta data is used to get more info about an instance
+  * `curl http://169.254.169.254/latest/meta-data/` to get meta data
+  * `curl http://169.254.169.254/latest/user-data/` to get bootstrap script that was run

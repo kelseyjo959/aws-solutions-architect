@@ -20,4 +20,4 @@
       * reboot will not lose data
       * upon termination, can tell AWS to keep an EBS Root Volume upon termination of Instance
 
-> *Back to EC2 Notes:* [EC2 README](./README.md)
+> *Back to EC2 Notes:* [**EC2 README**](./README.md)

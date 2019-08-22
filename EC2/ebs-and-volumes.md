@@ -58,4 +58,4 @@
   * Copy AMI from one Region to another
   * use copied AMI to launch new EC2 Instance into new Region
 
-> *Back to EC2 Notes:* [EC2 README](./README.md)
+> *Back to EC2 Notes:* [**EC2 README**](./README.md)

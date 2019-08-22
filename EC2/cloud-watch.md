@@ -42,4 +42,4 @@
 * CloudTrail = surveliance, auditing
   * who is provisiong what resource style of question
 
-> *Back to EC2 Notes:* [EC2 README](./README.md)
+> *Back to EC2 Notes:* [**EC2 README**](./README.md)

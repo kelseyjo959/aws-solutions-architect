@@ -1,4 +1,4 @@
-# EBS
+# Elastic Block Storage (EBS)
 
 * **elastic block store or virtual hard disk**
 * provides persistent block storage volumes for use with EC2
@@ -32,10 +32,11 @@
 
 ## Volumes & Snapshots
 
+* `aws ec2 create-snapshot` to create EBS volume on CLI
 * **Volumes exist on EBS**
 * **Snapshots exist on S3**
 * **Snapshots are points in time of Volumes**
-* **Snapshots are incremental - only changed blocks are moved to S3**
+* **Snapshots are ***incremental*** - only changed blocks are moved to S3**
 * **For root Volume of EBS, stop EC2 Instance before taking a snapshot**
   * one can create a Snapshot while the instance is running but it might be a safer call to stop it
 
@@ -44,8 +45,9 @@
 
 * **Volumes will always be in the same AZ as the EC2 Instance**
 
-* When an EC2 Instance with Volume is terminated, the root Volume is also terminated
-  * however, any additional volumes on that Instance will continue to persist
+* *Termination Protections is turned off by default*
+* *When an EC2 Instance with EBS Root Volume is terminated, the root Volume is also terminated if specified on Console or CLI*
+  * *however, any additional volumes on that Instance will continue to persist*
 
 * **To move EC2 Volume from one AZ to another:**
   * Take a Snapshot

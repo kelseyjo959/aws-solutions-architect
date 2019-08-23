@@ -60,12 +60,15 @@
   * **all outbound traffic is allowed by default**
 * **any number of EC2 instances for a Security Group**
 * **multiple Security Groups can be attached to an EC2 Instance**
+* cannot block certain IP addresses, instead have to use Network Access Control Lists
+* can specify allow rules but not deny rules
 
-> *Next Up:* [**EBS and Volumes**](./ebs-and-volumes.md)
+> *Next Up:* [**Elastic Block Storage and Volumes**](./ebs-and-volumes.md)
 > *Next Up:* [**AMI Types**](./ami-types.md)
 
 ## Encrypted Root Device Volumes & Snapshots
 
+* *EBS Root Volumes of default AMIs cannot be encrypted*
 * Snapshots of encrypted Volumes are encrypted automatically
 * Volumes restored from encrypted Snapshots are encrypted automatically
 * only unencrypted Snapshots can be shared
@@ -77,3 +80,45 @@
     * use AMI to launch new encrpyted Instance
 
 > *Next Up:* [**CLoud Watch**](./cloud-watch.md)
+
+## Elastic File System (EFS)
+
+* AWS file storage service for EC2
+* interface for creating and configuring a file system
+* **supports Network File System version 4 (NFSv4) protocol**
+* *can support thousands of NFS connections*
+* storage capacity is elastic - *scale up to Petabytes*
+  * shrinks and grows as files are removed or added
+  * storage is there when it is needed - *no pre-provisoning required*
+* **data is stored across multiple AZs in a Region**
+* *read after write consistency*
+* Lab Notes
+  * enable life cycle management for files within system
+    * choose time range to automatically move files to EFS IA storage class which is cheaper
+* Confused about Storage systems? Check out this [*webpage*](https://help.acloud.guru/hc/en-us/articles/115002011194)
+
+## Placement Groups
+
+* ways to place EC2 Groups
+* **name for Placement Group must be unique within AWS account**
+* **only certain types of Instances can be launched into a Placement Group**
+  * *Compute, Optimized, GPU, Memory Optimized, Storage Optimized*
+* Placement Groups cannot be merged
+* cannot move existing Instance into Placement Group
+  * create an AMI from Instance and then launch new Instance from AMI into Placement Group
+* 3 Types of Placement Groups:
+  * **Clustered PlacementGroups**
+    * a grouping of *homogenous* EC2 Instances within a *single AZ*
+    * **good for low network latency and/or high througput apps**
+  * **Spread Placement Groups**
+    * **individual critical EC2 Instances across multiple pieces of hardware**
+    * *can be in different AZ across one Region*
+    * think single instance
+  * **Partitioned**
+    * can have **multiple EC2 Instances within a single partition**
+    * HDFS, HBase, Cassandra
+    * AWS EC2 divides each group into logical segments
+    * *can be in different AZ across one Region*
+    * each partition within each Placement Group has its own network and power source
+    * no two partitions share the same rack which allows for failure isolation
+    * think multiple instances

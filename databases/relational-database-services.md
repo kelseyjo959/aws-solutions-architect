@@ -69,3 +69,5 @@
 * **can be multiple AZs**
 * *can be promoted to be the leader but this will break the replication process**
 * a Read Replica can be in a different Region
+
+> *Back to Database Notes:* [Databases README](./README.md

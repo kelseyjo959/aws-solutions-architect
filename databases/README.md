@@ -45,9 +45,13 @@
 ### ElastiCache
 
 * ElastiCache is a web service that can deploy, operate, and scale in-memory cache in the cloud
-  * improves performance of existing databases for web apps by reducing access times
+  * **improves performance of existing databases for web apps by reducing access times**
   * frequent identical queries
   * supports 2 open source in-memory caching engines:
     * MemcacheD
+      * can scale horizontally
     * Redis
-
+      * Multi-AZ
+      * Backups and restores of Redis
+    * Differences between MemcacheD and Redis
+    ![ElastiCache Types](../images/elasticache-types.png)

@@ -1,5 +1,20 @@
 # Relational Database Services
 
+## RDS Basic Info
+
+* **RDS runs on Virtual Machines**
+* **These virtual machines cannot be accessed**
+* **RDS is not serverless** exception = Aurora
+* upon RDS Instance creation, AZ can be chosen
+
+* RDS 2 key features:
+  * Multi-AZ for diaster recovery
+    * think hot swappable with no need to change url
+  * Read Replicas for performance
+    * secondary db gets replicated data but a failure would need a url change
+    * up to 5 copies at once
+    * good for re-directing huge loads of requests
+
 ## RDS Backups
 
 * **upon restoration, either type will create a new Instance with a new DNS endpoint**
@@ -14,7 +29,7 @@
     * **enabled by default**
     * backups stored in S3 with equal size of storage compared to your database
     * backups taken during time window
-      * during that window, elevated latency could occur due to the increased I/O
+      * *during that window, elevated latency could occur due to the increased I/O*
   * Database Snapshots
     * **manual process**
     * snapshots are stored even if the RDS Instance is deleted, unlike Automated Backups
@@ -29,6 +44,7 @@
 
 * copies data to other AZs **synchronously** by AWS
   * if an AZ fails, AWS updates the IP addresses and no administrative intervention is needed
+* **can force a failover from one AZ to another by rebooting RDS Instance**
 * **for disaster recovery only**
 * **available for these services:**
   * SQL Server
@@ -36,11 +52,12 @@
   * MySQL Server
   * PostgreSQL
   * MariaDB
+* Available for RDS Reserved Instances
 
-## Read Replica
+## Read Replicas
 
 * **used to increase performance**
-* can be Aurora or MySQL
+* **can be Aurora or MySQL**
 * production database **asynchronously** replicates to multiple copies
 * can have read replica inceptions (read replica reads another replica)
 * **allows for a read-only replica of the database**
@@ -49,6 +66,6 @@
 * can have read replicas of read replicas but beware of latency
 * used for scaling, not for DR
 * unique DNS endpoint for each instance
-* can have multiple AZs
-* can be promoted to be their own databases but this will break the replication process
+* **can be multiple AZs**
+* *can be promoted to be the leader but this will break the replication process**
 * a Read Replica can be in a different Region

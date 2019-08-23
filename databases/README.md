@@ -11,19 +11,10 @@
 * **6 AWS Relational Databases**
   * SQL Server
   * Oracle
-  * MySQL Server
+  * MySQL Server - port 3306
   * PostgreSQL
   * Aurora
   * MariaDB
-* **Relational Database Services** (RDS) 2 key features
-  * Multi-AZ for diaster recovery
-    * think hot swappable with no need to change url
-  * Read Replicas for performance
-    * secondary db gets replicated data but a failure would need a url change
-    * up to 5 copies at once
-    * good for re-directing huge loads of requests
-* **RDS runs on virtual machines but there is no access to these machines**
-* **RDS is not serverless** exception = Aurora
 
 ### Non Relational Databases
 
@@ -36,11 +27,12 @@
 
 * used for business intelligence
 * used to pull in large and complex data sets ususally by management
-* *Online Transaction Processing (OLTP) in RDS*
+* **Online Transaction Processing (OLTP) in RDS**
+  * maximum size of RDS volume for RDS Provisioned IOPS storage = 16TB
   * more simple query to find data
 * Online Analytics Processing (OLAP)
   * pulls in large amounts of data and does a lot of queries
-* AWS Data Warehouse Solution for OLAP = **Redshift**
+* **AWS Data Warehouse Solution for OLAP = Redshift**
 
 ### ElastiCache
 
@@ -48,9 +40,9 @@
   * **improves performance of existing databases for web apps by reducing access times**
   * frequent identical queries
   * supports 2 open source in-memory caching engines:
-    * MemcacheD
+    * **MemcacheD**
       * can scale horizontally
-    * Redis
+    * **Redis**
       * Multi-AZ
       * Backups and restores of Redis
     * Differences between MemcacheD and Redis

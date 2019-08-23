@@ -11,10 +11,10 @@
 * **spread across 3 distinct geographic data centers** (redundancy)
 * **eventual consistent reads (default setting)**
   * consistency across all data is reached within one second
-  * if an update is made, a 1 second delay occurs so if immediate read is needed, do not use this option
+  * *if an update is made, a 1 second delay occurs so if immediate read is needed, do not use this option*
 * **strongly consistent reads**
   * returns a result that reflects all writes that received a successful response prior to the read
-  * best for apps that need an update within less than a second upon an update
+  * *best for apps that need an update within less than a second upon an update*
 
 ## Redshift
 

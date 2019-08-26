@@ -9,3 +9,5 @@
 ## Latency Routing
 
 * create latency resource record set for AWS EC2 or ELB resource in each region that hosts your website
+
+> *Back to Route53 Notes:* [**Route53**](./README.md)

@@ -110,3 +110,5 @@
     * can also get the health check of each resource
       * only return values of healthy resources
     * **similar to Simple Routing but it allows for health checks on each record set**
+
+> *Route53 Lab Notes:*[**Route53 Lab Notes**](./lab-notes.md)

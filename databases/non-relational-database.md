@@ -62,4 +62,4 @@
   * **currently only available in 1 AZ**
   * can restore snapshots to new AZ in the event of outage
 
-> *Back to Database Notes:* [Databases README](./README.md
+> *Back to Database Notes:* [Databases README](./README.md)

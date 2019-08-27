@@ -115,4 +115,3 @@
   * **Gateway Endpoints**
     * similar to NAT Gateways
     * supported by S3 and DynamoDB
-

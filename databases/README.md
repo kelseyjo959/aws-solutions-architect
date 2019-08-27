@@ -16,12 +16,16 @@
   * Aurora
   * MariaDB
 
+> *Relational Database Service Notes* [RDS Notes](./relational-database-services.md)
+
 ### Non Relational Databases
 
 * Collection = Table
   * Document = Row
     * Key Value Pairs = Fields
 * **AWS DynamoDB**
+
+> *Non-Relational Database Notes* [Non-Relational Notes](./non-relational-database.md)
 
 ### Data Warehousing
 
@@ -47,3 +51,5 @@
       * Backups and restores of Redis
     * Differences between MemcacheD and Redis
     ![ElastiCache Types](../images/elasticache-types.png)
+
+> *Next Up:* [Aurora](./aurora.md)

@@ -40,3 +40,87 @@
   * For Route OUT:
     * `Edit Routes` with `0.0.0.0/0`, chose Internet Gateway
   * any subent associated with this route table will then be public
+
+* Accessing Private VPC subnet
+  * Create new Security Group for the EC2 Instance
+  * Pick the VPC the Instance is in
+  * Types
+    * All ICMP, Source = CIDR range of public subnet or specific Security Group
+    * allow HTTP, HTTPS, SSH
+
+## NAT Instances & NAT Gateways
+
+* Network Adress Translation
+* a way for private subnets to go out and download software from the Internet
+* **NAT Instances are EC2 Instances that handle the network address translation**
+* **NAT Gateways are spread across multiple AZ, highly available, not dependent on a single Instance**
+* NAT Gateways start at 5Gbps and scale to 45Gbps - **scales automatically**
+
+* Launch NAT Instance
+  * Launch EC2 Instance - community AMIs
+  * NAT type - free tier
+  * Network = pick your VPC
+  * Launch into **public subnet**
+  * **need to disable source/destination check on the Instance**
+  * once NAT Instance is set up, add it to VPC Route Table
+    * add route from private instance to NAT Instance IP
+  * **always behind a Security Group**
+  * NAT Instance is a networking bottle neck
+    * can get around this with bigger Instance size
+    * Autoscaling Groups, multiple subnets in different AZs but these are all a pain
+  * being phased out
+
+* Launch new NAT Gateway
+  * `NAT Gateways` in VPC Menu
+  * create in public subnet (based on subnet id)
+  * need to edit route table to point at new gateway
+    * give route out to 0.0.0.0/ with target of NAT gateway
+  * **not associated with Security Groups**
+  * **autmatically assigns public IP addr**
+  * no need to disable Source/Destination checks
+
+## NACls vs Security Groups
+
+* **VPC automatically comes with default NACL which allows all inbound/outbound traffic**
+* create new NACL
+  * pick VPC
+  * **upon NACL creation, Inbound and Outbound rules automatically deny everything**
+  * AWS suggests grouping rules in the 100s
+    * allow IPv4 = rule 100
+    * allow IPv6 = rule 101
+    * for outbound rules sometimes use ephemeral ports rathern than specific ports
+      * 1024 - 65535 - used by NAT Gateway
+      * used on the server end of a communication
+    * Allow/Deny occur in chronological order
+      * If an allow occurs before the deny, traffic is still allowed
+
+* NACLs trump Seucurity Groups
+* NACLs can block IP addresses, Security Groups cannot
+* subnet can only be associated with one NACL at a time
+
+## VPCs with ELB
+
+* **when creating an ELB, you need to have at least 2 public subnets**
+
+## VPC Flow Logs
+
+* enables capturing of info about IP traffic going to and from network interface within VPC
+* stored using AWS CloudWatch Logs
+  * once a log is created, can retreive that data within CloudWatch
+* Can be created at 3 levels:
+  * VPC
+  * subnet
+  * network interface level
+* Action `Create Flow Log`
+  * need a new CloudWatch log group to assign flow log to
+* once created, you cannot change its config
+* cannot tag a flow log
+* not all IP traffic is logged
+  * Instance communication with AWS DNS is not logged
+  * if using own DNS server, this traffic IS logged
+  * traffic meta data not logged
+  * windows license activation not logged
+  * DHCP is not logged
+  * AWS reserved IP addrs not logged
+  
+

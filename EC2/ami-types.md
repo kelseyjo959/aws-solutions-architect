@@ -1,4 +1,4 @@
-# AMI Types
+# AMI Types (Amazon Machine Images)
 
 ## EBS vs Instance Store
 

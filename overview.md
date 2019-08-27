@@ -37,6 +37,31 @@ The overview below covers the need to know in the High Level Services section be
 
     > **Note**: Bold and italic list items from above are the main ones to study.
 
-## Created Acronyms
+## Acronyms
 
+* AMI = Amazon Machine Images
+* ALB = Application Load Balancer
 * AZ = Availability Zone
+* CDN = Content Delivery Network
+* DNS = Domain Name Service
+* EBS = Elastic Block Storage
+* EC2 = Elastic Cloud Computing
+* ECS = Elastic Container Service
+* EFS = Elastic File System
+* ELB = Elastic Load Balancer
+* IA = Infrequently Accessed
+* IAM = Identity Access Management
+* MFA = Multi Factor Authentication
+* NACL = Network Access Control List
+* NAT = Network Address Translation
+* NLB = Network Load Balancer
+* OLTP = Online Transaction Processing (think RDS)
+* OLAP = Online Analytics Processing (think Redshift)
+* RDS = Relational Database Service
+* S3 = Simple Storage Service
+* SNS = Simple Notification Server
+* SSE = Server Side Encrpytion
+* SWF = Simple Work Flow
+* TTL = Time To Live
+* VPC = Virutal Private Cloud
+* VTL = Virtual Tape Library

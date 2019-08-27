@@ -1,6 +1,6 @@
 # CloudFront
 
-* CDN (Contend Delivery Network)
+* CDN (Content Delivery Network)
   * a system of distributed servers
     * deliver web content based on:
       * geographic location of users

@@ -15,7 +15,8 @@
     * configure routing tables
     * configure network gateways
 * can create a Hardware VPN connection between corporate data center and VPC
-  * allows you to leverage AWS Cloud as an extension of corporate Datacenter
+  * allows you to leverage AWS Cloud as an extension of corporate Datacentero
+* within each Region, 5 VPC are allowed
 
 * **VPCs consist of:**
   * **Internet Gateway**
@@ -23,12 +24,12 @@
   * Router
   * **Route Table(s)**
   * **Subnets**
-    * 1 Subnet = 1 Availability Zone
+    * **1 Subnet = 1 Availability Zone**
     * Can have multiple subnets in an AZ
   * **Network ACLs**
-    * Are Stateless
+    * *Are Stateless*
   * **Security Groups**
-    * Are Stateful
+    * *Are Stateful*
   * **Public or Private EC2 Instances**
 
 * AWS VPC Diagram
@@ -64,10 +65,10 @@
 
 * allows connection of one VPC to another via a direct network route using private IP addrs
 * Instances behave like they are on same private network
-* VPC peers can be within same AWS account or with other AWS accounts as well as between Regions
+* VPC peers can be within same AWS account or with other AWS accounts as well as *between Regions*
 * VPC peering is always in a STAR configuration
   * 1 central VPC peers with 4 others
-  * no transitive peering
+  * **no transitive peering**
     * two points of the star cannot go through the central point
     * if two points on the star need to communicate, they will need to have additional peer connection
 
@@ -94,3 +95,24 @@
 * **good for high throughput workloads or stable and reliably secure connection**
 * Direct Connect Diagram
 ![Direct Connect Diagram](../images/diret-connect-diagram.png)
+
+## VPC Endpoints
+
+* allow a **private connection between VPC and supported AWS services and VPC Endpoint Services**
+  * powered by Private Link without requiring an Internet Gateway, NAT device, VPN connection or Direct Connect
+* VPC Instances do not need public IP addresses to communicate with resources in this service
+* traffic between VPC and other services does not leave the AWS network
+* Endpoints are **virtual devices**
+  * redundant
+  * highly available
+  * horizontally scaled
+  * allow communication between Instances in VPC and services without imposing availability risks or bandwidth constraints on network traffic
+
+* 2 Types:
+  * **Interface Endpoints**
+    * Elastic network interface (ENI) with private IP address
+    * serves as entry point on EC2 for traffic destined to a supported device
+  * **Gateway Endpoints**
+    * similar to NAT Gateways
+    * supported by S3 and DynamoDB
+

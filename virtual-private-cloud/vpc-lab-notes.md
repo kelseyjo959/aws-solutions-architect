@@ -7,8 +7,8 @@
   * a Route Table will be created
   * NACL is created
   * Security Group created
-  * Internet Gateway is NOT created
-  * Subnets are NOT created
+  * Internet Gateway is *NOT* created
+  * Subnets are *NOT* created
 
 * **Security Groups do not span VPCs**
 * **us-east-1a is not going to be the same in a different AWS account, AWS randomizes the AZs**
@@ -55,6 +55,7 @@
 * **NAT Instances are EC2 Instances that handle the network address translation**
 * **NAT Gateways are spread across multiple AZ, highly available, not dependent on a single Instance**
 * NAT Gateways start at 5Gbps and scale to 45Gbps - **scales automatically**
+* **NAT Gateways are redundant inside the AZ**
 
 * Launch NAT Instance
   * Launch EC2 Instance - community AMIs
@@ -77,7 +78,7 @@
     * give route out to 0.0.0.0/ with target of NAT gateway
   * **not associated with Security Groups**
   * **autmatically assigns public IP addr**
-  * no need to disable Source/Destination checks
+  * **no need to disable Source/Destination checks**
 
 ## NACls vs Security Groups
 
@@ -96,7 +97,8 @@
 
 * NACLs trump Seucurity Groups
 * NACLs can block IP addresses, Security Groups cannot
-* subnet can only be associated with one NACL at a time
+* **subnet can only be associated with one NACL at a time**
+  * if not assigned, it will always be assigned to the default NACL that comes with creation of VPC
 
 ## VPCs with ELB
 
@@ -113,14 +115,23 @@
   * network interface level
 * Action `Create Flow Log`
   * need a new CloudWatch log group to assign flow log to
-* once created, you cannot change its config
-* cannot tag a flow log
-* not all IP traffic is logged
+* **once created, you cannot change its config**
+* **cannot tag a flow log**
+* **not all IP traffic is logged**
   * Instance communication with AWS DNS is not logged
   * if using own DNS server, this traffic IS logged
   * traffic meta data not logged
   * windows license activation not logged
   * DHCP is not logged
   * AWS reserved IP addrs not logged
-  
 
+## VPC Endpoints
+
+* must have an S3 IAM role for EC2 Instance
+* add role to EC2 Instance in private subnet
+* SSH into EC2 Instance 
+* remove route to NAT gateway (removes access to outside Internet)
+* `VPC EndPoint` in VPC Dashboard
+  * choose AWS service
+  * add to main route table
+  * `aws s3 ls -- region` + region_name

@@ -50,4 +50,74 @@
   * Activity Workers
     * carry out activity tasks
 
+## Simple Notification Service (SNS)
+
+* web service that makes it easy to set up, operate, and send notifications from the cloud
+* highly scaleable, flexible, and cost-effective capability to publish messages from app  and immediately deliver to subscribers or other apps
+* can deliver to SMS, email, any HTTP endpoint
+* group multiple recipients based on Topic
+  * topic = acces point for allowing recipients to dynamically subscribe to identical copies of the same notification
+  * one topic can support multiple deliveries to multiple endpoint types
+  * SNS formats each endpoint notification appropriately
+* all SNS messages are stored redundantly across multiple AZs
+* Benefits of SNS:
+  * instant and push based (no polling)
+  * use multiple transport protocols
+  * inexpensive, pay as you go
+  * point and click interface
+* SNS vs SQS:
+  * both are messaging systems
+  * SNS = push
+  * SQS = polls (pull)
+
+## Elastic Transcoder
+
+* media transcoder in the cloud
+* convert media files from original source format into different formats
+* provides transcoding presets for popular output formats - no guessing
+* pay based on the minutes that you transcode and the resolution at which you transcode
+
+## API Gateway
+
+* fully managed service that is easy to publish, maintain, monitor, and secure APIs that scale
+* can act like a **front door for access to many AWS services**
+
+* What API Gateways can do:
+  * expose HTTPS endpoints to define RESTful API
+  * serverlessly connect to services like Lambda and DynamoDB
+  * runs efficiently with **low cost**
+  * **scale effortlessly and automatically**
+  * track and control usage by API key
+  * **throttle requests to prevent attacks**
+  * connect to **CloudWatch to log** all requests
+  * maintain multiple versions of API
+
+* How to Configure:
+  * define API container
+  * define resources and nested resources (url paths)
+  * for each resource:
+    * select supported HTTP services (verbs)
+    * set security
+    * set target (EC2, Lambda, DB, etc)
+    * set request and response transformations
+
+* How to Deploy:
+  * deploy API to a stage
+    * uses API Gateway domain name by default but it can be customized
+    * now supports SSL/TLS Certs (HTTPS)
+
+* **API Caching**
+  * cache endpoint's response to increase performance
+  * reduce the number of calls to endpoints and improve latency of requests made to API
+  * caches for a TTL period in seconds
+
+* Same-Origin Policy
+  * important concept for web app security
+  * web browser permits scripts contained in first web page to access data in a second web page but only if the web pages have the same origin
+  * this is done to prevent Cross-Site-Scripting attacks (XSS attacks)
+  * AWS uses a lot of different domain names = problem/concern
+
+* Cross Origin Resource Sharing (CORS)
+  * one way the server can relax the Same-Origin Policy
+  * allows restricted resources on a web page to be requested from a different domain outside the domain from which the first request was served
 

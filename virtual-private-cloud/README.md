@@ -72,3 +72,25 @@
     * if two points on the star need to communicate, they will need to have additional peer connection
 
 > *Building a VPC Lab Notes:* [**VPC Lab Notes**](./vpc-lab-notes.md)
+
+## Bastion Hosts
+
+* special purpose computer on network designed and configured to withstand attacks
+* computer generally hosts one a singple application
+  * all other services are removed or limited to reduce threat to the computer
+* Bastion Host is usually located outside of the firewall or in a DMZ and usually involves access from untrusted networks/hosts
+* **Bastion Host provides a platform to SSH into the private subnet Instances**
+  * enter through IGW, router, route tables, NACL, NAT Gateway, Security Group then forwards the connection to private Instance
+  * hardening the bastion host is very important
+  * don't have to worry about hardening devices within private subnet then
+* **cannot use NAT Gateway as a Bastion Host**
+
+## Direct Connect
+
+* cloud service solution that makes it easy to establish a dedicated network connection from your premise to AWS
+* private connection to AWS
+  * reduce network costs, increase bandwidth throughput, consistent network experience
+* **dedicated connection** to public and private cloud via AWS backbone that does not traverse the Internet
+* **good for high throughput workloads or stable and reliably secure connection**
+* Direct Connect Diagram
+![Direct Connect Diagram](../images/diret-connect-diagram.png)

@@ -21,3 +21,4 @@
   * making this configuration doesnt do anything but sets up for when new Instances are needed for scaling purposes
 * ASGs are for scaling out
 
+> *Back to HA Notes* [HA Notes](./README.md)

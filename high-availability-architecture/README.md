@@ -49,3 +49,4 @@
 * quickly deploy and manage applications in AWS Cloud without worrying about infrastructure
 * simply upload application, and automatically handles details of capacity provisioning, load balancing, scaling, and app health monitoring
 
+> *HA Lab Notes* [HA Lab Notes](./ha-lab-notes.md)

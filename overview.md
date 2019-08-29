@@ -41,6 +41,7 @@ The overview below covers the need to know in the High Level Services section be
 
 * AMI = Amazon Machine Images
 * ALB = Application Load Balancer
+* ASG = Auto Scaling Group
 * AZ = Availability Zone
 * CDN = Content Delivery Network
 * DNS = Domain Name Service

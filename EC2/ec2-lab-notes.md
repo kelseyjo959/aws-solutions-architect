@@ -40,7 +40,7 @@
 
 * **termination protection is turned off by default**
 * default action for terminating an EC2 instance will also terminate the virtual hard drive
-  * **root EBS volume will be deleted by default** 
+  * **root EBS volume will be deleted by default**
   * root volume == operating system volume
 * **EBS root volumes of Default AMI's cannot be encrypted, must be done by 3rd party**
   * **additional volumes add on top of the root can be encrypted**

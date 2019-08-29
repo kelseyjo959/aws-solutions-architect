@@ -15,6 +15,11 @@
 * **strongly consistent reads**
   * returns a result that reflects all writes that received a successful response prior to the read
   * *best for apps that need an update within less than a second upon an update*
+* DynamoDB Headers attributes:
+  * x-amz-date
+  * x-amz-target
+  * host
+  * content-type
 
 ## Redshift
 

@@ -12,7 +12,7 @@
       * AWS and client jointly manage the keys
     * Server Side Encryption with Customer Provided Keys = **SSE-C**
       * give AWS your own created keys
-  * *Client Side Encyption*
-    * encrypt object yourself and upload the encrpyted object to S3
+  * *Client Side Encryption*
+    * encrypt object yourself and upload the encrypted object to S3
 
  > *Back to S3 Notes:* [**Back to S3 README**](./README.md)

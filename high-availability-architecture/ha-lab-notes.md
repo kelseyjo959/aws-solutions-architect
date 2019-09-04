@@ -18,7 +18,13 @@
 ## Auto Scaling Groups
 
 * need a Launch Configuration first
-  * making this configuration doesnt do anything but sets up for when new Instances are needed for scaling purposes
+  * making this configuration doesn't do anything but sets up for when new Instances are needed for scaling purposes
 * ASGs are for scaling out
+* schedule Auto Scaling when increased usage is expected
+* default ASG termination policies:
+  * if Instances are in multiple AZs, AZ with most Instances and with the oldest launch configuration
+  * determine if there is an unprotected Instance, terminate that one
+  * if multiple unprotected Instances, terminate one that is closest to nearest Billing Hour
+  * if there are multiple close to the same Billing Hour, pick at random
 
 > *Back to HA Notes* [HA Notes](./README.md)

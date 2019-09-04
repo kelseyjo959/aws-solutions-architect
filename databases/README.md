@@ -2,6 +2,9 @@
 
 ## Basic Database Info
 
+* AWS manages the underlying operating systems for all of its databases
+  * if you see a question about needing to access or manage the OS, an answer will most likely NOT include a DB
+
 ### Relational Databases
 
 * relational database is like a spreadsheet
@@ -30,7 +33,7 @@
 ### Data Warehousing
 
 * used for business intelligence
-* used to pull in large and complex data sets ususally by management
+* used to pull in large and complex data sets usually by management
 * **Online Transaction Processing (OLTP) in RDS**
   * maximum size of RDS volume for RDS Provisioned IOPS storage = 16TB
   * more simple query to find data
@@ -42,6 +45,7 @@
 
 * ElastiCache is a web service that can deploy, operate, and scale in-memory cache in the cloud
   * **improves performance of existing databases for web apps by reducing access times**
+  * store in key value pairs
   * frequent identical queries
   * supports 2 open source in-memory caching engines:
     * **MemcacheD**

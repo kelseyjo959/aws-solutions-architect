@@ -3,8 +3,9 @@
 ## SQS
 
 * AWS web service that gives access to message queue that can be used to store messages while computer is processing them
-* distributed queue system that quickly and reliably queue messages that one compoment in app generates to be consumed by another component
+* distributed queue system that quickly and reliably queue messages that one component in app generates to be consumed by another component
 * queue = temporary repository for messages waiting to be processed
+* messages will continue to exist and be pushed until they are deleted
 * **pull based**, not pushed based
 * **256 KB message size**
 * messages can be kept in queue from 1 min - 14 days
@@ -12,7 +13,7 @@
 * **Visibility Time Out**
   * amount of time message is invisible in SQS queue after reader picks up message
   * can result in a message being delivered twice - increase time out to resolve this issue
-  * timout maximum = *12 hours*
+  * timeout maximum = *12 hours*
 * guarantees message will be processed at least once
 * AWS SQS Long Polling is a way to retrieve messages from queues
   * long polling does not return response until message arrives in queue or timeout is reached
@@ -31,7 +32,7 @@
     * exactly-one processing
     * **order is preserved and delivered once**
     * remains available until consumer processes and deletes message
-    * *duplicates are never introducted*
+    * *duplicates are never introduced*
 
 ## Simple Work Flow Service (SWF)
 
@@ -48,14 +49,14 @@
     * application that can initiate a workflow
   * Deciders
     * control the flow of activity tasks in workflow execution
-    * if there is a failure or finished task, Decider decicdes what to do next
+    * if there is a failure or finished task, Decider decides what to do next
   * Activity Workers
     * carry out activity tasks
 
 ## Simple Notification Service (SNS)
 
 * web service that makes it easy to set up, operate, and send notifications from the cloud
-* highly scaleable, flexible, and cost-effective capability to publish messages from app  and immediately deliver to subscribers or other apps
+* highly scalable, flexible, and cost-effective capability to publish messages from app  and immediately deliver to subscribers or other apps
 * can deliver to SMS, email, any HTTP endpoint
 * group multiple recipients based on **Topic**
   * topic = access point for allowing recipients to dynamically subscribe to identical copies of the same notification
@@ -140,6 +141,7 @@
   * **Kinesis Firehouse**
     * **no persistent storage**, data has to be analyzed as data comes in
     * can have Lambda functions inside to handle the output
+    * can capture, transform, load streaming data into S3, Redshift, ElasticSearch Service, Splunk
   * **Kinesis Analytics**
     * works with Streams and Firehouse to analyze data on the fly inside either service
 
@@ -154,7 +156,7 @@
   * synchronize user data for multiple devices
   * recommended for all mobile application AWS services
 
-* Cognito Syncronization
+* Cognito Synchronization
   * tracks association between user identity and the user's various devices
   * provides seamless experience with Push Synchronization with updates and synchronize user data across multiple devices
 

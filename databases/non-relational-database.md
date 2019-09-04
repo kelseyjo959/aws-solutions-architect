@@ -20,6 +20,11 @@
   * x-amz-target
   * host
   * content-type
+* to greatly decrease response times enable the DAX (DynamoDB Accelerator)
+  * memory cache that is fully managed, highly available
+* DynamoDB stream
+  * is an ordered flow of information about changes to items in a DynamoDB table. When you enable a stream on a table, DynamoDB captures information about every modification to data items in the table
+  * integrates with Lambda triggers
 
 ## Redshift
 
@@ -44,7 +49,7 @@
 * Backups are enabled by default
   * **default is 1 day retention period**
   * **maximum retention is 35 days**
-  * **Redshift will attempt to keep at least 3 bakcups**
+  * **Redshift will attempt to keep at least 3 backups**
   * Redshift will **asynchronously replicate snapshots** to S3 in another Region for disaster recovery
 
 * Redshift Pricing

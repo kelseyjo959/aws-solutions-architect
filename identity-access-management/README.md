@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**Identity Access Management** is a way to manager users, access level to the AWS console, and communicate with other services in AWS.
+* **Identity Access Management** is a way to manager users, access level to the AWS console, and communicate with other services in AWS.
 
 > **Note**: Correctly applying the right level of access is important for security reasons.
 
@@ -24,5 +24,7 @@
 * **Policies** - Are **JSON documents** that give the permissions for users, groups, and roles to interact with each other.
 
 * Policies applied to a Group with Users will cascade downwards
+
+* SAML Federation can be used to use authorization credentials like Microsoft Active Directory
 
 > *Up Next*: [**IAM Notes**](./notes.md)

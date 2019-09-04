@@ -34,7 +34,7 @@
   * retrieval fee = per GB retrieved
   * first byte latency = milliseconds
     * **same as S3 IA but with support in only one Availability Zone**
-    * lower-cost option for infrequently accessed data
+    * **lower-cost option for infrequently accessed data**
     * **does not support multiple Availability Zone data resilience**
 
 * *S3 Intelligent Tiering*

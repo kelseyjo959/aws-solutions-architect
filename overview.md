@@ -4,7 +4,7 @@
 
 ### Introduction
 
-The overview below covers the need to know in the High Level Services section below. The other sections, such as Compute, Databases and more, will be updated / covered in later notes as I progress with my studying.
+* The overview below covers the need to know in the High Level Services section below. The other sections, such as Compute, Databases and more, will be updated / covered in later notes as I progress with my studying.
 
 ### Services Overview
 
@@ -25,7 +25,7 @@ The overview below covers the need to know in the High Level Services section be
 * Need to know;
   * Analytics
   * _**Compute**_  (EC2 & Lambda)
-  * _**Databases**_ (RDS, DynamoDB, Redshitft)
+  * _**Databases**_ (RDS, DynamoDB, Redshift)
   * Desktop & App Streaming
   * Machine Learning
   * Management & Governance
@@ -50,6 +50,7 @@ The overview below covers the need to know in the High Level Services section be
 * ECS = Elastic Container Service
 * EFS = Elastic File System
 * ELB = Elastic Load Balancer
+* DAX = DynamoDB Accelerator
 * IA = Infrequently Accessed
 * IAM = Identity Access Management
 * MFA = Multi Factor Authentication
@@ -61,8 +62,8 @@ The overview below covers the need to know in the High Level Services section be
 * RDS = Relational Database Service
 * S3 = Simple Storage Service
 * SNS = Simple Notification Server
-* SSE = Server Side Encrpytion
+* SSE = Server Side Encryption
 * SWF = Simple Work Flow
 * TTL = Time To Live
-* VPC = Virutal Private Cloud
+* VPC = Virtual Private Cloud
 * VTL = Virtual Tape Library

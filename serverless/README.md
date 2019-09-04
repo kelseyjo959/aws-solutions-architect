@@ -11,7 +11,7 @@
 * Lambdas used in following ways (triggers):
   * **event-driven** compute service
     * could be changes in data
-  * **reponse-driven** compute service
+  * **response-driven** compute service
     * code responds to HTTP requests using API Gateways or API calls made using AWS SDKs
   * **trigger list**
     * API Gateway
@@ -61,3 +61,4 @@
   * **scales out not up automatically**
 
 * **AWS X-ray helps to debug Lambda functions**
+* Lambda@Edge allows Lambda functions in AWS locations closer to users to decrease latency

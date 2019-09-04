@@ -29,7 +29,7 @@
 
 * **tiered storage available**
 * **lifecycle management** - move to different tiers
-* **versoining**
+* **versioning**
 * **encryption**
 * **multi factor authentication for DELETE**
 * **secure data and control access with access control lists and bucket policies**
@@ -41,7 +41,7 @@
 * **Value** : sequence of bytes that makes up the data
 * **Version ID** : allows for multiple versions of a file
 * **Metadata** : data about the object being stored
-* Subresources
+* Sub-resources
   * **Access Control List** - permissions for object level or bucket level
   * **Torrent**
 
@@ -74,7 +74,7 @@
 * once versioning is enabled, it **cannot be disabled**
   * versioning can be suspended
 * integrates with **Lifecycle Rules**
-* Versioning's **MFA Delete** capability can add additional layer of security
+* Versioning **MFA Delete** capability can add additional layer of security
 * To un-do a object deletion, delete the 'delete marker' version
   * this will restore the object from the latest version before the delete marker
 
@@ -91,7 +91,7 @@
 
 ## Cross Region Replication
 
-* **requires version control to be enabled on source and desintation**
+* **requires version control to be enabled on source and destination**
 * **regions must be unique**
 * replicate entire bucket or by specific tags for object(s)
 * chose buckets in same account or a different account

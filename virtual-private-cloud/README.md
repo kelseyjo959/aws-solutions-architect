@@ -15,7 +15,7 @@
     * configure routing tables
     * configure network gateways
 * can create a Hardware VPN connection between corporate data center and VPC
-  * allows you to leverage AWS Cloud as an extension of corporate Datacentero
+  * allows you to leverage AWS Cloud as an extension of corporate Data center
 * within each Region, 5 VPC are allowed
 
 * **VPCs consist of:**
@@ -36,12 +36,12 @@
   * Note: Bastion Host(or Jump Box) is an EC2 Instance in a public subnet which can be used to connect to an EC2 in private subnet
 ![VPC Diagram](../images/vpc-diagram.png)
 
-* Internet Assisgned Numbers Authority Private Subnets
+* Internet Assigned Numbers Authority Private Subnets
   * 10.0.0.0 - 10.255.255.255 (10/8 prefix)
   * 172.16.0.0 - 172.31.255.255 ( 172.16/12 prefix)
   * 192.168.0.0 - 192.168.255.255 (192.168/16 prefix)
   * largest subnet allowed is a /16
-  * smallest subenet allowed is a /28
+  * smallest subnet allowed is a /28
   > To understand CIDR and subnets a bit more: [CIDR.xyz](http://cidr.xyz/)
 
 ## VPC Uses/Actions
@@ -77,7 +77,7 @@
 ## Bastion Hosts
 
 * special purpose computer on network designed and configured to withstand attacks
-* computer generally hosts one a singple application
+* computer generally hosts one a single application
   * all other services are removed or limited to reduce threat to the computer
 * Bastion Host is usually located outside of the firewall or in a DMZ and usually involves access from untrusted networks/hosts
 * **Bastion Host provides a platform to SSH into the private subnet Instances**

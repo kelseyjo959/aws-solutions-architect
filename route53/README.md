@@ -7,7 +7,7 @@
   * can be IPv4 or IPv6
 * IPv4 is running out of addresses - only 4 billion
 * IPv6 has 340 undecillion addresses
-* last set of letters witin a domain name are the top level domain
+* last set of letters within a domain name are the top level domain
   * there can also be a second set that is the second level domain
     * gov.uk
     * com.au

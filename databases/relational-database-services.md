@@ -38,13 +38,14 @@
 
 * **supported by MySQL, Oracle, SQL Server, PostgreSQL, MariaDB & Aurora**
 * **encryption done with AWS KMS**
-* **encyption includes the data, its automated backups, read replicas, and snapshots**
+* **encryption includes the data, its automated backups, read replicas, and snapshots**
 
 ## Multi-AZ
 
 * copies data to other AZs **synchronously** by AWS
   * if an AZ fails, AWS updates the IP addresses and no administrative intervention is needed
-* **can force a failover from one AZ to another by rebooting RDS Instance**
+* **can force a fail-over from one AZ to another by rebooting RDS Instance**
+* good for production environments
 * **for disaster recovery only**
 * **available for these services:**
   * SQL Server

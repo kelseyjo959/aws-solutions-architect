@@ -11,14 +11,15 @@
 * pay for what is used, as you go
 * pay less as it is used more
 * pay even less when you reserve capacity
+* transferring data between EC2 and S3 in same region has no cost
 * **ON DEMAND**
   * users wanting low cost and flexibility without any up-front payment or long term commitment
-  * best for apps that are short term, spiky, or unpredictable workloads that cannot be interupted
+  * best for apps that are short term, spiky, or unpredictable workloads that cannot be interrupted
   * **fixed rate pricing by the hour, min, sec, etc with no commitment**
 * **RESERVED**
   * best for apps with steady state or predictable use that require reserved capacity
   * users able to make upfront payments to reduce total computing costs
-  * provides **capactity reservation**, offer discount on the hourly charge with **contract term 1 or 3 years**
+  * provides **capacity reservation**, offer discount on the hourly charge with **contract term 1 or 3 years**
   * Pricing Types
     * Standard Reserved Instances
       * offer up to 75% off on demand instances
@@ -32,10 +33,11 @@
 * **SPOT**
   * only feasible for apps that require only low compute prices
   * for users with urgent computing needs for large amounts of additional capacity
-  * **price bidding** available for when there is extra capacity. When that capacity is lost, an instance can potentiall by shut down in a matter of minutes
+  * **price bidding** available for when there is extra capacity. When that capacity is lost, an instance can potential by shut down in a matter of minutes
   * **best for apps with flexible start and end times**
   * if Spot instance terminated by AWS, will not be charged for partial hour
     * if instance is terminated by user, will be charged for **any hour in which the instance ran**
+  * SPOT can be interrupted in the event that there are not enough EC2 Instances to meed demand
 * **DEDICATED HOSTS**
   * useful for regulatory requirements that may not support multi-tenant virtualization
   * good for licensing which does not support multi-tenancy or cloud  deployments
@@ -71,13 +73,13 @@
 * *EBS Root Volumes of default AMIs cannot be encrypted*
 * Snapshots of encrypted Volumes are encrypted automatically
 * Volumes restored from encrypted Snapshots are encrypted automatically
-* only unencrypted Snapshots can be shared
+* only un-encrypted Snapshots can be shared
 * Upon creation of EC2 Instance, the Root Volume can be encrypted
   * If you need to encrypt it at a later date, this is the process:
-    * create snapshot of unencrypted root device volume
+    * create snapshot of un-encrypted root device volume
     * create copy of the Snapshot and select encryption type
     * create AMI from this copy
-    * use AMI to launch new encrpyted Instance
+    * use AMI to launch new encrypted Instance
 
 > *Next Up:* [**CLoud Watch**](./cloud-watch.md)
 
@@ -89,7 +91,7 @@
 * *can support thousands of NFS connections*
 * storage capacity is elastic - *scale up to Petabytes*
   * shrinks and grows as files are removed or added
-  * storage is there when it is needed - *no pre-provisoning required*
+  * storage is there when it is needed - *no pre-provisioning required*
 * **data is stored across multiple AZs in a Region**
 * *read after write consistency*
 * Lab Notes

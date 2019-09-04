@@ -16,6 +16,7 @@
 * Creating a Subnet
   * can chose AZ
   * pick subnet block with CIDR notation
+    * **allowed block size = /28 - /16**
   * name tag - example = `10.0.1.0 - us-east-2a`
   * optional IPv6 addr block
   * of a reserved block of addresses, **AWS will use 5 of them for the following**:
